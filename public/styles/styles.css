@@ -1,0 +1,151 @@
+/* Base Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #a19f9f;
+    color: #fafafa;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2rem !important;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: #6F439C;
+}
+
+.btn-successx {
+    background-color: red;
+    border-color: #000a06;
+}
+
+
+/* Form Inputs */
+
+.input {
+    border: 1px solid #DEDFE0;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 300;
+    height: 3rem;
+    margin-right: .8rem;
+    padding: .4rem .8rem;
+}
+
+.dropdown {
+    border-radius: 0;
+    border: 1px solid #DEDFE0;
+    background: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    height: 3rem;
+    margin-right: .8rem;
+}
+
+.button {
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(17 7 238 / 86%)), color-stop(1, rgb(180 179 231 / 55%)));
+    background: #0d6efd;
+    border: none;
+    border-bottom: 2px solid #0d6efd;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: .8rem;
+    transition: background .3s ease;
+    float: left;
+    margin-right: 1%;
+}
+
+#run-elephant,
+#reset-elephant {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #0d6efd;
+    font-size: 15px;
+    border: 1px solid #0d6efd;
+    background-image: linear-gradient(bottom, rgb(17, 7, 238) 86%, rgb(180, 179, 231) 55%);
+    background-image: -o-linear-gradient(bottom, rgb(17, 7, 238) 86%, rgb(180, 179, 231) 55%);
+    background-image: -moz-linear-gradient(bottom, rgb(17, 7, 238) 86%, rgb(180, 179, 231) 55%);
+    background-image: -webkit-linear-gradient(bottom, rgb(17, 7, 238) 86%, rgb(180, 179, 231) 55%);
+    background-image: -ms-linear-gradient(bottom, rgb(17, 7, 238) 86%, rgb(180, 179, 231) 55%);
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(17 7 238 / 86%)), color-stop(1, rgb(180 179 231 / 55%)));
+}
+
+#run-elephant:hover,
+#reset-elephant:hover {
+    background-image: linear-gradient(bottom, rgb(79, 142, 191) 0%, rgb(102, 166, 214) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(79, 142, 191) 0%, rgb(102, 166, 214) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(79, 142, 191) 0%, rgb(102, 166, 214) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(79, 142, 191) 0%, rgb(102, 166, 214) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(79, 142, 191) 0%, rgb(102, 166, 214) 100%);
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(79, 142, 191)), color-stop(1, rgb(102, 166, 214)));
+}
+
+#game-name-header {
+    font-size: 6rem;
+}
+
+#autoSizingInput,
+#autoSizingInputGameName {
+    float: left;
+}
+
+
+/* player List Item */
+
+.list-item {
+    text-decoration: none;
+    color: #333333;
+    background: #F7F7F7;
+    border: 1px solid #dedfe0;
+    margin: 1.6rem 0;
+    padding: 1.6rem;
+    display: block;
+    transition: background .3s ease;
+}
+
+.list-item:hover {
+    background: #fbff04;
+}
+
+.list-item__title {
+    font-size: 1.8rem;
+    margin-bottom: .4rem
+}
+
+.victim-head {
+    margin-left: 50%;
+}
+
+.list-item__subtitle {
+    color: #666;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.empty-message {
+    text-align: center;
+    margin: 3.2rem 0;
+}
+
+.last-name {
+    padding-left: 1%;
+}
+
+#player-container {
+    margin-top: 3%;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="styles/styles.css" rel="stylesheet">
+    <title>White Elephant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+
+        <div class="container">
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="header__title text-center display-4 font-weight-bolder">The White Elephant!</h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="actions__container container">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-xl-4 col-sm-1">
+                    <input id="searchtext" type="text" class="input" placeholder="Filter Players">
+                </div>
+                <div class="col-md-4 col-lg-4 col-xl-4 col-sm-1">
+                    <select id="filterby" class="dropdown">
+                        <option value="firstName">Sorty by Player Name</option>
+                        <option value="victim">Sorty by Victim</option>
+                        <option value="origSlotNum">Original Entry Order</option>
+                    </select>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xl-4 col-sm-1">
+                    <input type="checkbox" id="show-last-name" name="showLastName" value="showLastName">
+                    <label for="showLastName"> Show Last Names</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6 col-sm-6">
+                    <!--  <form id="gamename-entry">
+
+                        <input class="input" class="form-control" id="autoSizingInputGameName" placeholder="Enter Game Name" type="text" name="text">
+                        <button class="button btn btn-primary">SAVE</button>
+
+                    </form>-->
+                    <div id="game-name" class="col-sm d-flex flex-column">
+                        <span id="game-name-header"></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6 col-sm-6"></div>
+                <form class="align-items-left" id="new-player">
+                    <label class="visually-hidden" for="autoSizingInput">Name</label>
+                    <input class="input" class="form-control" id="autoSizingInput" placeholder="John Smith" type="text" name="text">
+                    <button class="button btn btn-primary">Add Name</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="player-container" class="container">
+
+        </div>
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <button type="button" id="run-elephant" class="button btn btn-primary">RUN Elephant</button>
+                </div>
+
+                <div class="col-6">
+                    <button type="button" id="reset-elephant" class="button btn btn-primary">RESET Elephant</button>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+    <script src="/scripts/bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+
+</html>

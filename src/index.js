@@ -4,13 +4,13 @@ import { setFilters, getFilters } from './filters'
 
 
 
-initilizePage()
-renderGame()
+initilizePage();
+renderGame();
     //upon submit run this
 
 document.querySelector('#run-elephant').addEventListener('click', function(event) {
-    setVictim()
-    renderGame()
+    setVictim();
+    renderGame();
 
 });
 
@@ -19,16 +19,16 @@ document.querySelector('#searchtext').addEventListener('input', (event) => {
     setFilters({
         searchText: event.target.value
     })
-    renderGame()
+    renderGame();
 })
 
 document.querySelector('#new-player').addEventListener('submit', function(event) {
-    event.preventDefault()
-    console.log(event.target.elements.text.value)
-    createdElephantPlayer(event.target.elements.text.value)
-    setVictim()
+    event.preventDefault();
+    console.log(event.target.elements.text.value);
+    createdElephantPlayer(event.target.elements.text.value);
+    setVictim();
     event.target.elements.text.value = '';
-    renderGame()
+    renderGame();
 
 });
 /* ***--save game name to be evaluated at later date --****
@@ -47,21 +47,20 @@ document.querySelector('#filterby').addEventListener('change', function(event) {
         sortBy: event.target.value
     })
 
-    renderGame()
+    renderGame();
 })
 
 document.querySelector('#reset-elephant').addEventListener('click', (event) => {
-    resetElephant()
-    renderGame()
-    renderGameName()
+    resetElephant();
+    renderGame();
+    renderGameName();
 })
 
 
 
 document.querySelector('#show-last-name').addEventListener('change', (event) => {
-    console.log(event.target.checked)
     setFilters({
         showLastName: event.target.checked
     })
-    renderGame()
+    renderGame();
 })

@@ -149,3 +149,8 @@ a {
 #player-container {
     margin-top: 3%;
 }
+
+.header__title {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}

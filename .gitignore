@@ -1,5 +1,6 @@
 node_modules/
 notes-React___Babel
+indecisionNotes
 public/dist/
 .env.test
 .env.development

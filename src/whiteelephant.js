@@ -1,32 +1,11 @@
 import { v4 as uuidv4 } from 'uuid'
 
-
-
-const userBase = [{
-        firstName: 'julie',
-        lastName: 'nelson',
-        id: uuidv4(),
-        famGroup: "1",
-        victim: ''
-    },
-    {
-        firstName: 'chuck',
-        lastName: 'nelson',
-        id: uuidv4(),
-        famGroup: "1",
-        victim: ''
-    }
-]
-
-
-let whiteElePlayers = []
-
-
+let whiteElePlayers = [];
 
 const createdElephantPlayer = (firstlastname) => {
-    const id = uuidv4()
-    firstlastname = firstlastname.split(' ')
-    const getLength = whiteElePlayers.length
+    const id = uuidv4();
+    firstlastname = firstlastname.split(' ');
+    const getLength = whiteElePlayers.length;
 
     if (firstlastname.length > 0) {
         whiteElePlayers.push({
@@ -40,23 +19,23 @@ const createdElephantPlayer = (firstlastname) => {
             familyname: ''
         })
 
-        saveplayers(whiteElePlayers)
-    }
+        saveplayers(whiteElePlayers);
+    };
 }
 
 
 const removePlayer = (playerid) => {
-    const playerIndex = whiteElePlayers.findIndex((element) => element.id === playerid)
+    const playerIndex = whiteElePlayers.findIndex((element) => element.id === playerid);
     if (playerIndex > -1) {
         whiteElePlayers.splice(playerIndex, 1);
     }
 
     //remove victim
-    const findVictim = whiteElePlayers.find((element) => element.victim === playerid)
+    const findVictim = whiteElePlayers.find((element) => element.victim === playerid);
         //set all victims to zero
     whiteElePlayers.forEach((element) => {
         element.victim = ''
-    })
+    });
 
 
     //  return whiteElePlayers
@@ -74,7 +53,7 @@ const getPlayers = () => {
         return getJSON ? JSON.parse(getJSON) : [];
 
     } catch (e) {
-        console.log('Invalid JSON! Setting array to []', e.message)
+        console.log('Invalid JSON! Setting array to []', e.message);
         return 'error';
 
     }
@@ -84,9 +63,8 @@ const getPlayers = () => {
 
 
 const resetElephant = () => {
-
-    saveplayers(whiteElePlayers = [])
-    setGameName('')
+    saveplayers(whiteElePlayers = []);
+    setGameName('');
 }
 
 
@@ -96,7 +74,7 @@ const getGameName = () => {
     try {
         return theJson ? JSON.parse(theJson) : setGameName('Your Game Name');
     } catch (e) {
-        console.log('Invalid JSON!', e.message)
+        console.log('Invalid JSON!', e.message);
         return 'error';
 
     }
@@ -116,7 +94,6 @@ function shuffleArray(array) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
-
 }
 
 
@@ -126,25 +103,24 @@ function shuffleArray(array) {
 const setVictim = () => {
     //shuffle before assignment
 
-    shuffleArray(whiteElePlayers)
+    shuffleArray(whiteElePlayers);
 
 
     whiteElePlayers.forEach(element => {
         if (whiteElePlayers.indexOf(element) === whiteElePlayers.length - 1) {
-            element.victimId = whiteElePlayers[0].id
-            element.victimName = whiteElePlayers[0].firstName
-            element.victimLastName = whiteElePlayers[0].lastName
+            element.victimId = whiteElePlayers[0].id;
+            element.victimName = whiteElePlayers[0].firstName;
+            element.victimLastName = whiteElePlayers[0].lastName;
         } else {
-            const addOne = whiteElePlayers.indexOf(element) + 1
-            element.victimId = whiteElePlayers[addOne].id
-            element.victimName = whiteElePlayers[addOne].firstName
-            element.victimLastName = whiteElePlayers[addOne].lastName
-
-        }
+            const addOne = whiteElePlayers.indexOf(element) + 1;
+            element.victimId = whiteElePlayers[addOne].id;
+            element.victimName = whiteElePlayers[addOne].firstName;
+            element.victimLastName = whiteElePlayers[addOne].lastName;
+        };
     });
 
 
-    saveplayers(whiteElePlayers)
+    saveplayers(whiteElePlayers);
 
 }
 
@@ -154,8 +130,8 @@ const setVictim = () => {
 const sortyByFilter = (sortBy) => {
     if (sortBy === 'firstName') {
         return whiteElePlayers.sort(function(a, b) {
-            const firstNameA = a.firstName.toUpperCase()
-            const firstNameB = b.firstName.toUpperCase()
+            const firstNameA = a.firstName.toUpperCase();
+            const firstNameB = b.firstName.toUpperCase();
 
             if (firstNameB > firstNameA) {
                 return -1;
@@ -167,8 +143,8 @@ const sortyByFilter = (sortBy) => {
         })
     } else if (sortBy === 'victim') {
         return whiteElePlayers.sort(function(a, b) {
-            const victimNameA = a.victimName.toUpperCase()
-            const victimNameB = b.victimName.toUpperCase()
+            const victimNameA = a.victimName.toUpperCase();
+            const victimNameB = b.victimName.toUpperCase();
             if (victimNameB > victimNameA) {
                 return -1;
             } else if (victimNameB < victimNameA) {
@@ -179,14 +155,14 @@ const sortyByFilter = (sortBy) => {
         })
     } else if (sortBy === 'origSlotNum') {
         return whiteElePlayers.sort(function(a, b) {
-            return a.origSlotNum - b.origSlotNum
+            return a.origSlotNum - b.origSlotNum;
         })
     } else {
-        return whiteElePlayers
+        return whiteElePlayers;
     }
 }
 
 
-whiteElePlayers = getPlayers()
+whiteElePlayers = getPlayers();
 
 export { setVictim, setGameName, getGameName, getPlayers, saveplayers, removePlayer, sortyByFilter, createdElephantPlayer, resetElephant }

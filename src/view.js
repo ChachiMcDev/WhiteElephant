@@ -150,26 +150,6 @@ const renderGame = () => {
 
 
 
-const renderGameName = () => {
-    console.log('hmm')
- //   if (getGameName()) {
- //       document.querySelector('#game-name-header').textContent = getGameName()
- //           // document.querySelector('#gamename-entry').innerHTML = ""
- //       document.querySelector('#gamename-entry').style.display = "none"
- //       const editGameNameButton = document.createElement('button')
- //       editGameNameButton.classList.add('btn', 'btn-lg', 'btn-primary', 'btn-block', 'pull-right')
- //       editGameNameButton.textContent = 'Edit Game Name'
- //       document.querySelector('#game-name-header').appendChild(editGameNameButton)
-//
- //   } else {
- //       console.log('you need a name son')
- //       document.querySelector('#gamename-entry').style.display = "visible"
- //       setGameName('')
- //   }
-//
-}
 
 
-
-
-export { initilizePage, renderGameName, renderGame }
+export { initilizePage, renderGame }

@@ -151,6 +151,7 @@ const renderGame = () => {
 
 
 const renderGameName = () => {
+    console.log('hmm')
  //   if (getGameName()) {
  //       document.querySelector('#game-name-header').textContent = getGameName()
  //           // document.querySelector('#gamename-entry').innerHTML = ""
@@ -165,7 +166,7 @@ const renderGameName = () => {
  //       document.querySelector('#gamename-entry').style.display = "visible"
  //       setGameName('')
  //   }
-
+//
 }
 
 
